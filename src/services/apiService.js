@@ -6,7 +6,8 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:500
 class ApiService {
   // General POST request wrapper
   async makeRequest(endpoint, options = {}) {
-    const url = `${API_BASE_URL}${endpoint}`
+    const url = `${API_BASE_URL.replace(/\/+$/, "")}/${endpoint.replace(/^\/+/, "")}`
+
 
     const config = {
       headers: {
