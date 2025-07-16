@@ -1,6 +1,6 @@
 import { authService } from "./authService"
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api"
+const API_BASE_URL = "https://finalbackend-production-c686.up.railway.app/api"
 
 
 class ApiService {
